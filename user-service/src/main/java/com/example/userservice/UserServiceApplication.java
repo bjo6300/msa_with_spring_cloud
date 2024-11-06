@@ -12,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableDiscoveryClient // 유레카 서버 말고 client
 @EnableFeignClients
 public class UserServiceApplication {
 
