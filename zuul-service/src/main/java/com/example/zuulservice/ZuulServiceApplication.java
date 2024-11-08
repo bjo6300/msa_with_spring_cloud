@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
-@EnableZuulProxy
+@EnableZuulProxy // Zuul -> deprecated
 public class ZuulServiceApplication {
 
     public static void main(String[] args) {

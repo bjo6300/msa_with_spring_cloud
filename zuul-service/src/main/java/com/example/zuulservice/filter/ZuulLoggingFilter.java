@@ -18,24 +18,24 @@ public class ZuulLoggingFilter extends ZuulFilter {
         log.info("**************** printing logs: ");
 
         RequestContext ctx = RequestContext.getCurrentContext();
-        HttpServletRequest request = ctx.getRequest();
+        HttpServletRequest request = ctx.getRequest(); 
         log.info("**************** " + request.getRequestURI());
 
         return null;
     }
 
     @Override
-    public String filterType() {
+    public String filterType() { // 사전 필터
         return "pre";
     }
 
     @Override
-    public int filterOrder() {
+    public int filterOrder() { // 필터 순서
         return 1;
     }
 
     @Override
-    public boolean shouldFilter() {
+    public boolean shouldFilter() { // 필터 사용 유무
         return true;
     }
 }

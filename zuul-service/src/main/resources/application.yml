@@ -6,7 +6,7 @@ spring:
     name: my-zuul-service
 
 zuul:
-  routes:
+  routes: # 포트포워딩
     first-service:
       path: /first-service/**
       url: http://localhost:8081
