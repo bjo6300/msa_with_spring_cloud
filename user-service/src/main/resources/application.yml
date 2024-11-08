@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 0 # 랜덤 포트 사용 -> 랜덤 포트로 user-service 여러 개 띄우면 0번 포트만 유레카에 보여진다.
 #  port: ${random.int(50000,50001)}
 #  address: 127.0.0.1
 
@@ -31,8 +31,8 @@ spring:
     password:
 
 eureka:
-#  instance:
-#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance: # 랜덤포트 0번을 사용하고 user-service 여러 개 띄우는 경우 유레카에 인스턴스 이름으로 안보이던 랜덤포트(인스턴스 아이디로 구분)를 보여주게 한다.
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 #    prefer-ip-address: true
 #    ip-address: ${server.address}
   client:
